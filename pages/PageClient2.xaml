@@ -1,0 +1,22 @@
+﻿<Page x:Class="WpfApp1.pages.PageClient2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.pages"
+        mc:Ignorable="d"
+        Title="PageClient2" Height="450" Width="800">
+    <Grid>
+        <Image Source="C:\Users\Alex\Desktop\В2\Товар_import\1.jpg" Margin="10,28,689,358" Grid.Column="0" Grid.Row="0" RenderTransformOrigin="0.163,1.017"/>
+        <Image Source="C:\Users\Alex\Desktop\В2\Товар_import\2.jpg" Margin="245,28,457,358" Grid.Column="0" Grid.Row="0"/>
+        <Image Source="C:\Users\Alex\Desktop\В2\Товар_import\3.jpg" Margin="322,24,352,358" Grid.Column="0" Grid.Row="0"/>
+        <Image Source="C:\Users\Alex\Desktop\В2\Товар_import\4.jpg" Margin="148,28,587,358" Grid.Column="0" Grid.Row="0"/>
+        <DataGrid Name ="dg" Margin="-10,101,10,59" FontFamily="Comic Sans MS" Background="#FF76E383"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="64" Margin="726,253,0,123">
+            <Button Content="Выйти" Click="LogoutButton_Click" RenderTransformOrigin="-1.535,0.514" Height="33" Width="56" FontFamily="Comic Sans MS"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="380" Margin="420,0,0,376">
+            <Label x:Name="fullNameLabel" FontFamily="Comic Sans MS" Width="377" Content="1" />
+        </StackPanel>
+    </Grid>
+</Page>
