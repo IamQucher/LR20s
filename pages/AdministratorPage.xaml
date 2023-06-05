@@ -25,9 +25,22 @@
             <ColumnDefinition Width="126*"/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid Grid.Row="0" Grid.Column="0" Name="dg" Grid.ColumnSpan="7" FontFamily="Comic Sans MS" FontWeight="Black" Margin="0,84,0,48" SelectionChanged="dg_SelectionChanged" Background="#FF76E383"/>
+        <DataGrid Grid.Row="0" Grid.Column="0" Name="dg" AutoGenerateColumns="False" Grid.ColumnSpan="7" FontFamily="Comic Sans MS" FontWeight="Black" Margin="0,84,0,48" SelectionChanged="dg_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding ProductName}" />
+                <DataGridTextColumn Header="Описание Продукта" Binding="{Binding ProductDescription}" />
+                <DataGridTextColumn Header="Категория" Binding="{Binding ProductCategory}" />
+                <DataGridTextColumn Header="Производитель" Binding="{Binding ProductManufacturer}" />
+                <DataGridTextColumn Header="Цена" Binding="{Binding ProductCost}" />
+                <DataGridTextColumn Header="Скидка %" Binding="{Binding ProductDiscountAmount}" />
+                <DataGridTextColumn Header="Количество на складе" Binding="{Binding ProductQuantityInStock}" />
+                <DataGridTextColumn Header="Статус" Binding="{Binding ProductStatus}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Width="287" Grid.ColumnSpan="2" Margin="25,10,0,10">
-            <Button Content="Удалить товар" Click="Button_Click_1" RenderTransformOrigin="0.802,0.198" Height="33" FontFamily="Comic Sans MS"/>
+           
             <Button Content="Добавить товар" Click="Button_Click" Width="113" Height="33" FontFamily="Comic Sans MS"/>
         </StackPanel>
         <StackPanel Grid.ColumnSpan="5" Margin="0,0,6,296" Grid.Column="2">

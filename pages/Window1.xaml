@@ -23,7 +23,7 @@
         <TextBox x:Name="nameTextBox" Grid.Row="1" Margin="93,0,-93,10"/>
 
 
-        <Label Content="Description:" Grid.Row="2" Margin="0,5"/>
+        <Label Content="Описание" Grid.Row="2" Margin="0,5"/>
         <TextBox x:Name="descriptionTextBox" Grid.Row="2" Margin="93,0,-93,10"/>
 
 

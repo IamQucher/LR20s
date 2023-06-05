@@ -11,7 +11,21 @@
         <Image Source="C:\Users\Alex\Desktop\В2\Товар_import\2.jpg" Margin="245,28,457,358" Grid.Column="0" Grid.Row="0"/>
         <Image Source="C:\Users\Alex\Desktop\В2\Товар_import\3.jpg" Margin="322,24,352,358" Grid.Column="0" Grid.Row="0"/>
         <Image Source="C:\Users\Alex\Desktop\В2\Товар_import\4.jpg" Margin="148,28,587,358" Grid.Column="0" Grid.Row="0"/>
-        <DataGrid Name ="dg" Margin="-10,101,10,59" FontFamily="Comic Sans MS" Background="#FF76E383"/>
+
+        <DataGrid Grid.Row="0" Grid.Column="0" Name="dg" AutoGenerateColumns="False" Grid.ColumnSpan="7" FontFamily="Comic Sans MS" FontWeight="Black" Margin="0,84,0,48">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding ProductName}" />
+                <DataGridTextColumn Header="Описание Продукта" Binding="{Binding ProductDescription}" />
+                <DataGridTextColumn Header="Категория" Binding="{Binding ProductCategory}" />
+                <DataGridTextColumn Header="Производитель" Binding="{Binding ProductManufacturer}" />
+                <DataGridTextColumn Header="Цена" Binding="{Binding ProductCost}" />
+                <DataGridTextColumn Header="Скидка %" Binding="{Binding ProductDiscountAmount}" />
+                <DataGridTextColumn Header="Количество на складе" Binding="{Binding ProductQuantityInStock}" />
+                <DataGridTextColumn Header="Статус" Binding="{Binding ProductStatus}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="64" Margin="726,253,0,123">
             <Button Content="Выйти" Click="LogoutButton_Click" RenderTransformOrigin="-1.535,0.514" Height="33" Width="56" FontFamily="Comic Sans MS"/>
         </StackPanel>
